@@ -1,14 +1,7 @@
 # 全部成功
 from airsim.types import ImageRequest, Quaternionr, Vector3r
 import airsim
-import time
-import numpy as np
-import os
-import pprint
-import cv2
-from scipy.spatial.transform import Rotation as R 
-import math
-import circle_finder
+
 
 class uav_setpoints:
     def __init__(self) -> None:
@@ -60,7 +53,7 @@ class airsim_client:
         self.client.enableApiControl(True)
 
         # self.dhc = dh.drone_func_class()
-        self.circle_finder = circle_finder.circle_finder(self.client)
+       
 
         self.setpoints = uav_setpoints()
 
